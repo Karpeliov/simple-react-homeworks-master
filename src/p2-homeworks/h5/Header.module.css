@@ -1,0 +1,32 @@
+.header {
+
+    text-align: center;
+    border: 2px solid red;
+    font-size: medium;
+    font-weight: bold;
+    color: red;
+}
+
+.navbar {
+    border: 1px solid black;
+    grid-area: nav;
+    margin: 10px;
+    /*background-color: #ffff00;*/
+    padding: 20px;
+}
+
+.item a {
+    margin: 10px;
+    padding-inline: 100px;
+    color: #d04646;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.item a.activeLink {
+    color: #d04646;
+    font-weight: bold;
+    background-color: #7fff00;
+    text-decoration: none;
+}

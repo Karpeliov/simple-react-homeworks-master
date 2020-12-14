@@ -1,8 +1,9 @@
 .main {
+    text-align: center;
     width: 450px;
     margin-left: 250px;
     padding: 15px;
-    text-align: left;
+
     background-color: orangered;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;

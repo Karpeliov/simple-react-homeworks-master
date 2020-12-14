@@ -1,0 +1,14 @@
+.main {
+    margin: 15px auto;
+    text-align: center;
+}
+
+.main h1 {
+    font-size: 100px;
+    color: red;
+}
+
+.error_message {
+    font-size: 45px;
+    color: red;
+}

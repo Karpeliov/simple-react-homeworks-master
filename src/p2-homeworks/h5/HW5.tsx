@@ -1,17 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "./Header";
 import Routes from "./Routes";
 import {HashRouter} from "react-router-dom";
 
+
 function HW5() {
+
+    const [showNB, setShowNB] = useState(true)
+    const onBlur = (a: boolean) => {
+        setShowNB(a)
+        console.log("onBlur")
+    }
+
     return (
         <div>
             {/*в gh-pages лучше работает HashRouter*/}
             <HashRouter>
 
-            <Header/>
+                <Header onBlur={onBlur} showNB={showNB}/>
 
-            <Routes/>
+                <Routes/>
 
             </HashRouter>
         </div>
