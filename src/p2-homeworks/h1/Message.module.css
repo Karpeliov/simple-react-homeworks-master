@@ -1,0 +1,60 @@
+.message {
+
+    display: grid;
+
+    grid-template-areas:
+"ava messBlock"
+"ava messBlock";
+
+    grid-template-rows: 75px 75px;
+    grid-template-columns: 75px 300px;
+    /*grid-gap: 5px;*/
+    background-color: bisque;
+}
+
+.message img {
+    width: 60px;
+    border-radius: 25px;
+}
+
+.ava {
+    grid-area: ava;
+}
+
+.message_text {
+    margin-left: 10px;
+    color: yellow;
+
+}
+
+.name {
+    margin-left: 5px;
+    font-weight: bold;
+    color: cornflowerblue;
+}
+
+.time {
+    margin-right: 5px;
+    text-align: right;
+}
+
+.block {
+    grid-area: messBlock;
+    border-radius: 5px;
+    background: darkslategrey;
+    position: relative;
+    width: 300px;
+    height: 75px;
+}
+
+.block::after {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    left: -13px;
+    bottom: 0px;
+    border: 20px solid transparent;
+    border-bottom: 15px solid darkslategrey;
+    border-radius: 10px;
+}
+

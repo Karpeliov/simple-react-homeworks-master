@@ -1,0 +1,48 @@
+.main {
+    width: 450px;
+    margin-left: 250px;
+    padding: 15px;
+    text-align: left;
+    background-color: orangered;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 2px solid forestgreen;
+}
+
+.buttClass {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: yellow;
+    height: 35px;
+    font-size: larger;
+}
+
+.buttError {
+    border-radius: 10px;
+    background-color: red;
+    height: 40px;
+    font-size: larger;
+}
+
+.someClass {
+    border: 2px solid forestgreen;
+    height: 30px;
+    font-size: large;
+}
+
+
+.error {
+    border: 5px double red;
+    height: 40px;
+    font-size: 35px;
+}
+
+.users {
+    border: 2px solid forestgreen;
+    margin-left: 53px;
+    padding: 5px;
+    background-color: gold;
+    border-radius: 10px;
+
+}
+

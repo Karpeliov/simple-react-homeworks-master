@@ -1,0 +1,35 @@
+.default {
+    cursor: pointer;
+    margin-top: 21px;
+    margin-bottom: 10px;
+    background: yellow;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+.default:active {
+
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.red {
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: red;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+.red:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
