@@ -1,5 +1,6 @@
 .header {
 
+    height: 20px;
     text-align: center;
     border: 2px solid red;
     font-size: medium;
@@ -8,16 +9,20 @@
 }
 
 .navbar {
+    position: absolute;
+    z-index: 5;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid black;
     grid-area: nav;
-    margin: 10px;
-    /*background-color: #ffff00;*/
+    background-color: #ffff00;
     padding: 20px;
 }
 
 .item a {
-    margin: 10px;
-    padding-inline: 100px;
+    /*margin: 10px;*/
+    margin-inline: 100px;
     color: #d04646;
     font-weight: bold;
     text-decoration: none;

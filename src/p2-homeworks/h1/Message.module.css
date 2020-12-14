@@ -39,6 +39,7 @@
 }
 
 .block {
+    z-index: 0;
     grid-area: messBlock;
     border-radius: 5px;
     background: darkslategrey;
