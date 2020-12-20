@@ -6,7 +6,7 @@ import {HashRouter} from "react-router-dom";
 
 function HW5() {
 
-    const [showNB, setShowNB] = useState(true)
+    const [showNB, setShowNB] = useState(false)
     const onBlur = (a: boolean) => {
         setShowNB(a)
         console.log("onBlur")

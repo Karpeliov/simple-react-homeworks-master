@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {NavLink} from "react-router-dom";
 import HeaderStyles from './Header.module.css';
 
@@ -8,6 +8,8 @@ export type HeaderPropsType = {
 }
 
 function Header(props: HeaderPropsType) {
+
+
     return (
         <div className={HeaderStyles.header} onMouseLeave={() => props.onBlur(false)}
              onMouseMove={() => props.onBlur(true)}>M E N U
