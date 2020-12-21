@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import SuperEditableSpan from "./common/c4-SuperEditableSpan/SuperEditableSpan";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 import {restoreState, saveState} from "./localStorage/localStorage";
+import style from "./HW6.module.css"
 
 
 function HW6() {
@@ -19,21 +20,24 @@ function HW6() {
 
 
     return (
-        <div>
+        <div >
             <hr/>
             homeworks 6
             {/*should work (должно работать)*/}
-            <div>
+            <div className={style.main}>
+            <div >
                 <SuperEditableSpan
+
                     value={value}
                     onChangeText={setValue}
                     spanProps={{children: value ? undefined : "enter text..."}}
                 />
 
             </div>
+
             <SuperButton onClick={save}>save</SuperButton>
             <SuperButton onClick={restore}>restore</SuperButton>
-
+            </div>
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperEditableSpan/>*/}
