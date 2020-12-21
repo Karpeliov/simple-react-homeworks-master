@@ -1,5 +1,6 @@
 import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState} from "react";
 import SuperInputText from "../../../h4/common/c1-SuperInputText/SuperInputText";
+import style from "./SuperEditableSpan.module.css";
 
 // тип пропсов обычного инпута
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
@@ -27,6 +28,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
+    const [border, setBorder] = useState<boolean>(false);
     const [editMode, setEditMode] = useState<boolean>(false);
     const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {};
 
@@ -36,7 +38,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         onEnter && onEnter();
     };
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
-       setEditMode(false); // выключить editMode при нажатии за пределами инпута
+        setEditMode(false); // выключить editMode при нажатии за пределами инпута
 
         onBlur && onBlur(e);
     };
@@ -46,7 +48,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
         onDoubleClick && onDoubleClick(e);
     };
 
-    const spanClassName = `${"сделать красивый стиль для спана"} ${className}`;
+    const spanClassName = `${border ? style.span_border : ""} ${className}`;
 
     return (
         <>
@@ -63,14 +65,22 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                     <span
                         onDoubleClick={onDoubleClickCallBack}
                         className={spanClassName}
-
+                        onMouseEnter={() => {
+                            setBorder(true)
+                        }} onMouseLeave={() => {
+                        setBorder(false)
+                    }}
                         {...restSpanProps}
                     >
                         {/*если нет захардкодженного текста для спана, то значение инпута*/}
                         {children || restProps.value}
+
                     </span>
+
                 )
+
             }
+            {border && <span className={style.help_cloud}>{"  DoubleClick to Edit"}</span>}
         </>
     );
 }

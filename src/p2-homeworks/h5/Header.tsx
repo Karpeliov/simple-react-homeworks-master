@@ -12,7 +12,7 @@ function Header(props: HeaderPropsType) {
 
     return (
         <div className={HeaderStyles.header} onMouseLeave={() => props.onBlur(false)}
-             onMouseMove={() => props.onBlur(true)}>M E N U
+             onMouseEnter={() => props.onBlur(true)}>M E N U
             {props.showNB &&
             <div className={HeaderStyles.navbar}>
             <span className={HeaderStyles.item}>
