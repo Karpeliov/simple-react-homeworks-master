@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {homeWorkReducer} from "./bll/homeWorkReducer";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import {log} from "util";
 
 const initialPeople = [
     {_id: 0, name: "Кот", age: 3},
@@ -16,14 +17,23 @@ function HW8() {
 
     const finalPeople = people.map(p => (
         <div key={p._id}>
-            some name, age
+            {p.name}, {p.age} лет
+            {console.log("finalPeople")}
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "up"}))
+    const sortUp = () => {
+        setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "up"}))
+    }
+    const sortDown = () => {
+        setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "down"}))
+    }
+    const check18 = () => {
+        setPeople(homeWorkReducer(initialPeople, {type: "check", payload: 18}))
+    }
 
     return (
-        <div>
+        <div style={{textAlign: "center"}}>
             <hr/>
             homeworks 8
 
@@ -31,9 +41,9 @@ function HW8() {
 
             {finalPeople}
             <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
+            <div><SuperButton onClick={sortDown}>sort down</SuperButton></div>
+            <div><SuperButton onClick={check18}>check 18</SuperButton></div>
 
-            check 18
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
